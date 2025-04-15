@@ -7,7 +7,7 @@ import { Dashboard } from './Pages/Dashboard';
 import { Clock } from './Pages/Clock';
 import { Logs } from './Pages/Logs';
 import { Analytics } from './Pages/Analytics';
-import Login from './Pages/login';
+import Login from './Pages/Login';
 import { useAuth } from './context/useAuth';
 import { useQuery, useMutation, gql } from "@apollo/client";
 import Profile from './Pages/Profile';
