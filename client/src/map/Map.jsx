@@ -13,7 +13,7 @@ import { useQuery, useMutation, gql } from "@apollo/client";
 const DEFAULT_CENTER = { lat: 23.2599, lng: 77.4126 }; // Madhya Pradesh
 const DEFAULT_ZOOM = 4.5;
 const DEFAULT_ZOOM_WITH_LOCATION = 16;
-const API_KEY = import.meta.env.GOOGLE_API_KEY; // Use env variable or fallback
+const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY; // Use env variable or fallback
 
 const SET_LOCATION_PERIMETER = gql`
   mutation SetLocationPerimeter($latitude: Float!, $longitude: Float!, $perimeter: Int!) {

@@ -8,8 +8,8 @@ import { ApolloClientProvider } from "../src/apolloClient.jsx";
 createRoot(document.getElementById("root")).render(
   <AuthProvider>
     <Auth0Provider
-      domain={import.meta.env.AUTH_DOMAIN}
-      clientId={import.meta.env.AUTH_CLIENT}
+      domain={import.meta.env.VITE_AUTH_DOMAIN}
+      clientId={import.meta.env.VITE_AUTH_CLIENT}
       authorizationParams={{
         redirect_uri: window.location.origin,
       }}

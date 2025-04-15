@@ -41,7 +41,7 @@ export const Logs = () => {
     if (!lat || !lng) return 'Location data unavailable';
     try {
       const response = await axios.get(
-        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${import.meta.env.GOOGLE_API_KEY}`
+        `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${import.meta.env.VITE_GOOGLE_API_KEY}`
       );
       return response.data.results && response.data.results.length > 0
         ? response.data.results[0].formatted_address
