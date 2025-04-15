@@ -3,7 +3,7 @@ import { setContext } from "@apollo/client/link/context";
 
 // HTTP link to backend
 const httpLink = createHttpLink({
-  uri: "http://localhost:3001",
+  uri: "hr-portal-sepia.vercel.app",
 });
 
 // Auth link uses localStorage for token
