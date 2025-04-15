@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../prisma/generated/client"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Location {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  lat       Float
+  lon       Float
+  perimeter Int
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String   @unique
+  password  String?
+  role      String   @default("careworker")
+  createdAt DateTime @default(now())
+  shifts    Shift[]  @relation("UserShifts")
+}
+
+model Shift {
+  id                  String   @id @default(auto()) @map("_id") @db.ObjectId
+  user                User     @relation("UserShifts", fields: [userId], references: [id])
+  userId              String   @db.ObjectId
+  date                DateTime
+  clockInTime         String
+  clockOutTime        String?
+  clockInLocationLat  Float?
+  clockInLocationLng  Float?
+  clockOutLocationLat Float?
+  clockOutLocationLng Float?
+  clockInNote         String?
+  clockOutNote        String?
+}
