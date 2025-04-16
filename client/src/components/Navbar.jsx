@@ -3,7 +3,6 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
-// import { useAuth } from '../Context/useAuth';
 function Navbar() {
   const { isAuthenticated, getAccessTokenSilently, logout } = useAuth0();
   const [userRole, setUserRole] = useState(null);
