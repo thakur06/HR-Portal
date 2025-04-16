@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/useAuth";
 import { gql, useQuery} from '@apollo/client';
 import { LifeLine } from 'react-loading-indicators';
 const GET_SHIFTS_TODAY = gql`

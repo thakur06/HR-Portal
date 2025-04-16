@@ -2,7 +2,7 @@ import * as GMPX from '@googlemaps/extended-component-library/react';
 import React, { useState, useRef, useEffect } from 'react';
 import { LocationPicker } from './Place'; // Ensure this is correctly implemented
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/useAuth";
+import { useAuth } from "../../src/Context/useAuth";
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";

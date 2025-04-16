@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react'
 import { useQuery, useMutation, gql } from "@apollo/client";
 import { useAuth0 } from '@auth0/auth0-react';
-import { useAuth } from '../context/useAuth';
+import { useAuth } from '../../src/Context/useAuth';
 
 const CREATE_USER = gql`
   mutation CreateUser($name: String!, $email: String!, $password: String, $role: String) {
