@@ -139,7 +139,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\Abhishek\\Videos\\server\\prisma\\generated\\client",
+      "value": "C:\\Users\\Abhishek\\Videos\\HR-Portal\\server\\prisma\\generated\\client",
       "fromEnvVar": null
     },
     "config": {
@@ -150,14 +150,18 @@ const config = {
         "fromEnvVar": null,
         "value": "windows",
         "native": true
+      },
+      {
+        "fromEnvVar": null,
+        "value": "rhel-openssl-3.0.x"
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\Abhishek\\Videos\\server\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\Abhishek\\Videos\\HR-Portal\\server\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
+    "rootEnvPath": "../../../.env",
     "schemaEnvPath": "../../../.env"
   },
   "relativePath": "../..",
@@ -176,8 +180,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../prisma/generated/client\"\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Location {\n  id        String @id @default(auto()) @map(\"_id\") @db.ObjectId\n  lat       Float\n  lon       Float\n  perimeter Int\n}\n\nmodel User {\n  id        String   @id @default(auto()) @map(\"_id\") @db.ObjectId\n  name      String\n  email     String   @unique\n  password  String?\n  role      String   @default(\"careworker\")\n  createdAt DateTime @default(now())\n  shifts    Shift[]  @relation(\"UserShifts\")\n}\n\nmodel Shift {\n  id                  String   @id @default(auto()) @map(\"_id\") @db.ObjectId\n  user                User     @relation(\"UserShifts\", fields: [userId], references: [id])\n  userId              String   @db.ObjectId\n  date                DateTime\n  clockInTime         String\n  clockOutTime        String?\n  clockInLocationLat  Float?\n  clockInLocationLng  Float?\n  clockOutLocationLat Float?\n  clockOutLocationLng Float?\n  clockInNote         String?\n  clockOutNote        String?\n}\n",
-  "inlineSchemaHash": "fcb5d6c955191082abf5d1c1752f241e774c1d37d0722a257193f283d7a87bb4",
+  "inlineSchema": "generator client {\n  provider      = \"prisma-client-js\"\n  output        = \"../prisma/generated/client\"\n  binaryTargets = [\"native\", \"rhel-openssl-3.0.x\"]\n}\n\ndatasource db {\n  provider = \"mongodb\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Location {\n  id        String @id @default(auto()) @map(\"_id\") @db.ObjectId\n  lat       Float\n  lon       Float\n  perimeter Int\n}\n\nmodel User {\n  id        String   @id @default(auto()) @map(\"_id\") @db.ObjectId\n  name      String\n  email     String   @unique\n  password  String?\n  role      String   @default(\"careworker\")\n  createdAt DateTime @default(now())\n  shifts    Shift[]  @relation(\"UserShifts\")\n}\n\nmodel Shift {\n  id                  String   @id @default(auto()) @map(\"_id\") @db.ObjectId\n  user                User     @relation(\"UserShifts\", fields: [userId], references: [id])\n  userId              String   @db.ObjectId\n  date                DateTime\n  clockInTime         String\n  clockOutTime        String?\n  clockInLocationLat  Float?\n  clockInLocationLng  Float?\n  clockOutLocationLat Float?\n  clockOutLocationLng Float?\n  clockInNote         String?\n  clockOutNote        String?\n}\n",
+  "inlineSchemaHash": "369f215674b56e85cae1db8f13f08242fddac9ce9982d495fbc97eaecf555060",
   "copyEngine": true
 }
 config.dirname = '/'
