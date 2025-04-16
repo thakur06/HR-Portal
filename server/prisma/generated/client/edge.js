@@ -139,7 +139,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\Abhishek\\Videos\\HR-Portal\\server\\prisma\\generated\\client",
+      "value": "C:\\Users\\ar497\\Desktop\\HR-Portal\\server\\prisma\\generated\\client",
       "fromEnvVar": null
     },
     "config": {
@@ -157,12 +157,11 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\Abhishek\\Videos\\HR-Portal\\server\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\ar497\\Desktop\\HR-Portal\\server\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../.env",
-    "schemaEnvPath": "../../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../..",
   "clientVersion": "6.6.0",
