@@ -10,7 +10,7 @@ import { Analytics } from './Pages/Analytics';
 import Login from './Pages/Login';
 import { useQuery, useMutation, gql } from "@apollo/client";
 import Profile from './Pages/Profile';
-import { useAuth } from './Context/useAuth.js';
+import { useAuth } from '../src/Context/useAuth';
 const CREATE_USER = gql`
   mutation CreateUser($name: String!, $email: String!, $password: String, $role: String) {
     createUser(name: $name, email: $email, password: $password, role: $role) {
