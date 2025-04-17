@@ -410,10 +410,10 @@ const resolvers = {
 
       // 2. Calculate distance from perimeter center
       const distance = getDistance(
-        { latitude: Number(lat), longitude: Number(lng) },
+        { latitude: lat, longitude: lng },
         {
-          latitude: Number(locationPerimeter.latitude),
-          longitude: Number(locationPerimeter.longitude),
+          latitude: locationPerimeter.lat,
+          longitude: locationPerimeter.lon,
         }
       );
 
